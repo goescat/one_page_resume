@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<style>
+    body {
+        padding: 5% 15% 5% 15%;
+        line-height: 30px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 23px;
+        line-height: 28px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+
+    ul {
+        line-height: 35px;
+    }
+
+    #cpn_role {
+        border-left: 4px solid #afafaf;
+        padding: 0% 0% 1% 2%;
+    }
+
+    #role_ds {
+        padding: 1% 0% 1% 2%;
+    }
+
+    #exp_ds {
+        padding: 0% 0% 0% 1%;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yu-Chun's Resume</title>
+</head>
+
+<body>
+    <h1>Wei Yu-Chun (Jean)</h1>
+    Email: <code>goescat1024@gmail.com</code>
+    <div id="exp_ds">
+        <br>
+        5 years + of experience in automation test development and manual testing.
+        <ul>
+            <li>Capable of planning and establishing automation test processes and CI/CD setup from 0 to 1.</li>
+            <li>
+                Familiar in Python, Selenium, Appium, WebDriver, WDA, ADB, AVD, and other related skills.</li>
+        </ul>
+        2 years + of management experience, able to lead a team to plan and achieve goals.
+    </div>
+    <br>
+
+    <hr>
+    <h2>Recent Experience</h2>
+    <div id="exp_ds">
+        <h4>DeepHow</h4>
+        <div id="cpn_role">
+            <h3>QA Tech Lead</h3>
+            2023 Apr - present
+            <div id="role_ds">
+                <ul>
+                    <li>Synchronize new feature information across QA members to ensure everyone has a consistent
+                        understanding,
+                        enabling seamless handover of testing scope when necessary.</li>
+                    <li>Understanding the expertise and aspirations of each QA member, assisting them in setting
+                        quarterly
+                        goals, and guiding them to achieve those goals.</li>
+                    <li>Continuously maintain and optimize the automation testing framework, upgrade packages when
+                        important
+                        updates are available.</li>
+                    <li>When team members encounter problems, discuss with them, provide advice, and offer assistance.
+                    </li>
+                </ul>
+            </div>
+
+            <h3>Senior Quality Assurance Engineer</h3>
+            2022 Dec - 2023 Apr
+            <div id="role_ds">
+                <ul>
+                    <li>Take over the CI/CD Jenkins configuration for automation testing, ensuring that Docker and
+                        pipeline
+                        scripts
+                        better meet the requirements of the testing and QA team.</li>
+                    <li>Introducing a test case management system to centrally manage scattered test cases, documents,
+                        and the
+                        results
+                        of each regression test.</li>
+                </ul>
+            </div>
+            <h3>Automation QA Engineer</h3>
+            2022 Jan - 2022 Dec
+            <div id="role_ds">
+                <ul>
+                    <li>Build an end-to-end web and mobile testing framework using Python, Selenium, and Appium to
+                        execute
+                        routine
+                        regression tests, saving manual effort.</li>
+                    <li>Build an API testing framework using Python, pytest, and requests to quickly check API responses
+                        in
+                        common
+                        and
+                        special scenarios.</li>
+                    <li>Collaborate closely with PM and development, understanding the overall product requirements,
+                        planning
+                        test
+                        cases, reproducing errors, and conducting tests.</li>
+                    <li>Implement playtime checks for video streaming across various regions and network environments,
+                        with
+                        alerts
+                        for
+                        unexpected timeouts.</li>
+                    <li>Collaborate with DevOps to list the requirements for the automation testing execution
+                        environment,
+                        define
+                        parameter files, and adjust or optimize the automation testing framework as necessary to meet
+                        the
+                        constraints.</li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <h4>Shopee</h4>
+        <div id="cpn_role">
+            <h3>Software Automation Test Engineer</h3>
+            2018 Aug - 2021 Dec
+            <div id="role_ds">
+                <ul>
+                    <li>Integrate Selenium, Appium, AVD, and other tools to build a test framework.
+                        (Skills Keywords: Python, shell script, adb, Jenkins)</li>
+                    <li>Automated visual regression test for the web and Android platforms. (Skills Keywords: Sikuli,
+                        OpenCV)</li>
+                    <li>Track and monitor unstable issues (Skills Keywords: JIRA)</li>
+                    <li>Support the manual testing team by developing tools to enhance the testing process.</li>
+                    <li>Implement test plans and test cases (using mind maps for planning and discussion/manage cases in
+                        TestLink).</li>
+                    <li>Assist in interviewing candidates and designing coding interview questions.</li>
+                    <li>Document experiences and identify technical topics to share with the team.</li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <h4>Trend Micro</h4>
+        <div id="cpn_role">
+            <h3>Intern</h3>
+            2018 Jan - 2021 Jul
+            <div id="role_ds">
+                <ul>
+                    <li>Fine-tune automation test scripts.</li>
+                    <li>Follow test cases to perform manual testing.</li>
+                    <li>Help create the build environment for the product and build the product image.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br>
+    <button id="button_export">Download this page to PDF</button>
+</body>
+
+
+<script src="./html2canvas.min.js"></script>
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+
+<script>
+    document.getElementById('button_export').addEventListener('click', function () {
+        document.getElementById("button_export").style.display = 'none';
+
+        const body = document.body,
+            html = document.documentElement;
+
+        const imgWeight = window.innerWidth;
+
+        const imgHeight = Math.max(body.scrollHeight, body.offsetHeight,
+            html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+        html2canvas(document.body).then(function (canvas) {
+            let doc = new jspdf.jsPDF('p', 'mm', [imgHeight, imgWeight]);
+            doc.addImage(canvas.toDataURL('image/jpeg'), 0, 0, imgWeight, imgHeight);
+            doc.save('Resume.pdf');
+        });
+
+        document.getElementById("button_export").style.display = '';
+    });
+
+</script>
+
+</html>
