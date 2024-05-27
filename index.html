@@ -22,21 +22,38 @@
         font-size: 22px;
     }
 
+    h5 {
+        font-size: 20px;
+    }
+
     ul {
         line-height: 35px;
     }
 
-    #cpn_role {
+    #time_line_block {
         border-left: 4px solid #afafaf;
         padding: 0% 0% 1% 2%;
     }
 
-    #role_ds {
+    #indent_block {
         padding: 1% 0% 1% 2%;
     }
 
-    #exp_ds {
+    #descript_block {
         padding: 0% 0% 0% 1%;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .box {
+        background-color: #f0f0f0;
+        padding: 20px;
+        text-align: center;
     }
 </style>
 
@@ -48,7 +65,7 @@
 <body>
     <h1>Wei Yu-Chun (Jean)</h1>
     Email: <code>goescat1024@gmail.com</code>
-    <div id="exp_ds">
+    <div id="descript_block">
         <br>
         5 years + of experience in automation test development and manual testing.
         <ul>
@@ -62,12 +79,12 @@
 
     <hr>
     <h2>Recent Experience</h2>
-    <div id="exp_ds">
+    <div id="descript_block">
         <h4>DeepHow</h4>
-        <div id="cpn_role">
+        <div id="time_line_block">
             <h3>QA Tech Lead</h3>
             2023 Apr - present
-            <div id="role_ds">
+            <div id="indent_block">
                 <ul>
                     <li>Synchronize new feature information across QA members to ensure everyone has a consistent
                         understanding,
@@ -85,7 +102,7 @@
 
             <h3>Senior Quality Assurance Engineer</h3>
             2022 Dec - 2023 Apr
-            <div id="role_ds">
+            <div id="indent_block">
                 <ul>
                     <li>Take over the CI/CD Jenkins configuration for automation testing, ensuring that Docker and
                         pipeline
@@ -99,7 +116,7 @@
             </div>
             <h3>Automation QA Engineer</h3>
             2022 Jan - 2022 Dec
-            <div id="role_ds">
+            <div id="indent_block">
                 <ul>
                     <li>Build an end-to-end web and mobile testing framework using Python, Selenium, and Appium to
                         execute
@@ -131,10 +148,10 @@
         <br>
         <hr>
         <h4>Shopee</h4>
-        <div id="cpn_role">
+        <div id="time_line_block">
             <h3>Software Automation Test Engineer</h3>
             2018 Aug - 2021 Dec
-            <div id="role_ds">
+            <div id="indent_block">
                 <ul>
                     <li>Integrate Selenium, Appium, AVD, and other tools to build a test framework.
                         (Skills Keywords: Python, shell script, adb, Jenkins)</li>
@@ -152,10 +169,10 @@
         <br>
         <hr>
         <h4>Trend Micro</h4>
-        <div id="cpn_role">
+        <div id="time_line_block">
             <h3>Intern</h3>
             2018 Jan - 2018 Jul
-            <div id="role_ds">
+            <div id="indent_block">
                 <ul>
                     <li>Fine-tune automation test scripts.</li>
                     <li>Follow test cases to perform manual testing.</li>
@@ -165,34 +182,149 @@
         </div>
     </div>
     <br>
+    <hr>
+    <h2>Skills</h2>
+    <div class="container">
+        <div class="box">
+            <h3>Python 🐍</h3>
+            The languages I frequently use both in my daily life and at work include understanding essential
+            concepts such as decorators and generators in Python.
+        </div>
+        <div class="box">
+            <h3>Web, Android, iOS Automation 🤖️</h3>
+            Using Selenium and Appium for automated testing, with flexibility in combining ADB commands, graphic
+            recognition, and other techniques to conduct diverse tests.
+        </div>
+        <div class="box">
+            <h3>Linux 🐧 / Mac </h3>
+            My preferred OS for daily use are Ubuntu and Mac. Not only am I proficient in a GUI environment, but
+            I am also skilled in the command line and using shell scripts to accomplish tasks.
+        </div>
+        <div class="box">
+            <h3>Docker 🐳</h3>
+            I have experience using Docker for automated test environment provisioning, which facilitates easy
+            management and rapid deployment.
+        </div>
+        <div class="box">
+            <h3>Passion 🧡</h3>
+            Passionate about finding and solving problems. Eager to learn, patient, and enthusiastic about
+            trying new things to discover better solutions!
+        </div>
+        <div class="box">
+            <h3>Git 🗄️</h3>
+            I am accustomed to using Git as a version control tool and am familiar with its common features and
+            commands.
+        </div>
+        <div class="box">
+            <h3>JMeter 🪶</h3>
+            I have experience using JMeter to perform performance testing on critical APIs of websites and to
+            generate reports.
+        </div>
+        <div class="box">
+            <h3>Backend 🏗️</h3>
+            I have a basic understanding of backend development and am capable of handling tasks from package
+            installation and configuration to coding (PHP, Django, etc.).
+        </div>
+        <div class="box">
+            <h3>Website Frontend 🖥️</h3>
+            I can use basic HTML, CSS, JS, and other technologies to create frontend interfaces.
+        </div>
+    </div>
+    <br>
+    <hr>
+    <h2>Projects</h2>
+    <div id="descript_block">
+        <div id="time_line_block">
+            <h3>One Page Resume</h3>
+            <a href="https://goescat.github.io/one_page_resume/"
+                target="_blank" /><code>https://goescat.github.io/one_page_resume/</code></a>
+            <br>
+            Here is RECURSION! Surprise!
+            <div id="viewing_text">
+                You can export my resume to PDF. The export feature using jsPDF and html2canvas and is only available in
+                desktop view.
+            </div>
+            <div id="export_text" style="display: none">
+                This resume is exported from this web page, the export feature using jsPDF and html2canvas and is only
+                available in
+                desktop view. You can view any immediate changes (if there are any) here.
+            </div>
+        </div>
+        <div id="time_line_block">
+            <h3>Plurk bot - g035 Weather Cat</h3>
+            <a href="https://www.plurk.com/g035" target="_blank" /><code>https://www.plurk.com/g035</code></a>
+            <br>
+            integrates with a weather API to fetch current weather data at
+            regular intervals and posts it on the social platform Plurk.
+        </div>
+        <div id="time_line_block">
+            <h3>Blog - 雜物堆放倉</h3>
+            <a href="http://tech.goescat.site" target="_blank" /><code>http://tech.goescat.site</code></a>
+            <br>
+            Personal blog. Created using Blogger, with additional template
+            modifications.
+        </div>
+        <div id="time_line_block">
+            <h3>Simple Django Note</h3>
+            <a href="https://github.com/goescat/Simple-Django-Note"
+                target="_blank" /><code>https://github.com/goescat/Simple-Django-Note</code></a>
+            <br>
+            A simple note-taking website built with Django. Users can log in to view, add, delete, and edit their own
+            notes.
+        </div>
+        <div id="time_line_block">
+            <h3>Macaron Icon Theme</h3>
+            <a href="https://github.com/goescat/Macaron-icon-theme"
+                target="_blank" /><code>https://github.com/goescat/Macaron-icon-theme</code></a>
+            <br>
+            The Macaron icon theme is an icon theme that can be installed on Linux systems.
+        </div>
+        <div id="time_line_block">
+            <h5>For more projects, please visit my GitHub:</h5>
+            <a href="https://github.com/goescat" target="_blank" /><code>https://github.com/goescat</code></a>
+            <br>
+
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
     <button id="button_export">Download this page to PDF</button>
 </body>
-
 
 <script src="./html2canvas.min.js"></script>
 <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
 
 <script>
+    // Only web browser can download PDF, hidden btn when mobile browser
+    function isMobileDevice() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    window.onload = function () {
+        var button = document.getElementById('button_export');
+        if (isMobileDevice()) {
+            button.style.display = 'none';
+        }
+    };
+
     document.getElementById('button_export').addEventListener('click', function () {
         document.getElementById("button_export").style.display = 'none';
-
-        const body = document.body,
-            html = document.documentElement;
-
-        const imgWeight = window.innerWidth;
-
-        const imgHeight = Math.max(body.scrollHeight, body.offsetHeight,
-            html.clientHeight, html.scrollHeight, html.offsetHeight);
+        document.getElementById("viewing_text").style.display = 'none';
+        document.getElementById("export_text").style.display = '';
 
         html2canvas(document.body).then(function (canvas) {
-            let doc = new jspdf.jsPDF('p', 'mm', [imgHeight, imgWeight]);
-            doc.addImage(canvas.toDataURL('image/jpeg'), 0, 0, imgWeight, imgHeight);
-            doc.save('Resume.pdf');
+            var imgData = canvas.toDataURL('image/png');
+            var pdf = new jspdf.jsPDF('p', 'px', [canvas.width / 3, canvas.height / 3]);
+            pdf.addImage(imgData, 'jpeg', 0, 0, canvas.width / 3, canvas.height / 3);
+            pdf.save('webpage.pdf');
         });
 
         document.getElementById("button_export").style.display = '';
-    });
+        document.getElementById("viewing_text").style.display = '';
+        document.getElementById("export_text").style.display = 'none';
 
+    });
 </script>
 
 </html>
