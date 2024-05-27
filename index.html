@@ -317,7 +317,7 @@
             var imgData = canvas.toDataURL('image/png');
             var pdf = new jspdf.jsPDF('p', 'px', [canvas.width / 3, canvas.height / 3]);
             pdf.addImage(imgData, 'jpeg', 0, 0, canvas.width / 3, canvas.height / 3);
-            pdf.save('webpage.pdf');
+            pdf.save('Resume.pdf');
         });
 
         document.getElementById("button_export").style.display = '';
