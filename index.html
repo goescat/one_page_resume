@@ -314,9 +314,9 @@
         document.getElementById("export_text").style.display = '';
 
         html2canvas(document.body).then(function (canvas) {
-            var imgData = canvas.toDataURL('image/png');
+            var imgData = canvas.toDataURL('image/jpeg');
             var pdf = new jspdf.jsPDF('p', 'px', [canvas.width / 3, canvas.height / 3]);
-            pdf.addImage(imgData, 'jpeg', 0, 0, canvas.width / 3, canvas.height / 3);
+            pdf.addImage(imgData, 0, 0, canvas.width / 3, canvas.height / 3);
             pdf.save('Resume.pdf');
         });
 
