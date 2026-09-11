@@ -55,6 +55,20 @@
         padding: 20px;
         text-align: center;
     }
+
+    @media print {
+        @page {
+            margin: 12mm;
+        }
+
+        body {
+            padding: 0;
+        }
+
+        #button_export {
+            display: none !important;
+        }
+    }
 </style>
 
 <head>
@@ -285,13 +299,12 @@
             <br>
             Here is RECURSION! Surprise!
             <div id="viewing_text">
-                You can export my resume to PDF. The export feature using jsPDF and html2canvas and is only available in
-                desktop view.
+                You can export my resume to a text-based PDF from the browser print dialog. The export feature is only
+                available in desktop view.
             </div>
             <div id="export_text" style="display: none">
-                This resume is exported from this web page, the export feature using jsPDF and html2canvas and is only
-                available in
-                desktop view. You can view any immediate changes (if there are any) here.
+                This resume is exported from this web page as a text-based PDF from the browser print dialog. You can
+                view any immediate changes (if there are any) here.
             </div>
         </div>
         <div id="time_line_block">
@@ -333,14 +346,11 @@
     <br>
     <hr>
     <br>
-    <button id="button_export">Download this page to PDF</button>
+    <button id="button_export">Print / Save as PDF</button>
 </body>
 
-<script src="./html2canvas.min.js"></script>
-<script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
-
 <script>
-    // Only web browser can download PDF, hidden btn when mobile browser
+    // The browser print dialog is only enabled for desktop browsers.
     function isMobileDevice() {
         return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     }
@@ -353,21 +363,7 @@
     };
 
     document.getElementById('button_export').addEventListener('click', function () {
-        document.getElementById("button_export").style.display = 'none';
-        document.getElementById("viewing_text").style.display = 'none';
-        document.getElementById("export_text").style.display = '';
-
-        html2canvas(document.body).then(function (canvas) {
-            var imgData = canvas.toDataURL('image/jpeg');
-            var pdf = new jspdf.jsPDF('p', 'px', [canvas.width / 3, canvas.height / 3]);
-            pdf.addImage(imgData, 0, 0, canvas.width / 3, canvas.height / 3);
-            pdf.save('Resume.pdf');
-        });
-
-        document.getElementById("button_export").style.display = '';
-        document.getElementById("viewing_text").style.display = '';
-        document.getElementById("export_text").style.display = 'none';
-
+        window.print();
     });
 </script>
 
